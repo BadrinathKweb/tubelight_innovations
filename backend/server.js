@@ -37,9 +37,10 @@ connection.connect((err) => {
 });
 
 app.post('/submit-buy-form', async (req, res) => {
-  const { item_name, years_old, min_price, max_price } = req.body;
-  const sql = 'INSERT INTO buy_forms (item_name, years_old, min_price, max_price) VALUES (?, ?, ?, ?)';
-  connection.query(sql, [item_name, years_old, min_price, max_price], async (err, result) => {
+  const { name, student_class, phone_number, item_name, years_old, min_price, max_price } = req.body;
+  const sql = 'INSERT INTO buy_forms (name, student_class, phone_number, item_name, years_old, min_price, max_price) VALUES (?,?,?,?,?,?,?)';
+
+  connection.query(sql, [name, student_class, phone_number, item_name, years_old, min_price, max_price], async (err, result) => {
     if (err) {
       console.error('Error inserting data:', err);
       res.status(500).json('Error submitting form');
@@ -67,9 +68,10 @@ app.post('/submit-buy-form', async (req, res) => {
   });
 });
 app.post('/submit-sell-form', async (req, res) => {
-  const { item_name, years_from_purchase, min_expected_price, max_expected_price} = req.body;
-  const sql = 'INSERT INTO sell_forms (item_name, years_from_purchase, min_expected_price, max_expected_price) VALUES (?, ?, ?, ?)';
-  connection.query(sql, [item_name, years_from_purchase, min_expected_price, max_expected_price,], async (err, result) => {
+  const { name, student_class, phone_number,item_name, years_from_purchase, min_expected_price, max_expected_price} = req.body;
+  const sql = 'INSERT INTO sell_forms (name, student_class, phone_number, item_name, years_from_purchase, min_expected_price, max_expected_price) VALUES (?,?,?,?,?,?,?)';
+
+  connection.query(sql, [name, student_class, phone_number,item_name, years_from_purchase, min_expected_price, max_expected_price,], async (err, result) => {
     if (err) {
       console.error('Error inserting data:', err);
       res.status(500).json('Error submitting form');

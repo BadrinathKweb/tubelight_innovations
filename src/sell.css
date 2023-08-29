@@ -1,0 +1,61 @@
+/* buy.css or sell.css */
+.form {
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form input,
+.form button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  background-color: blue; /* Set the background color to blue */
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form button.view-related-products-btn {
+  background-color: blue; /* Set the background color to blue */
+  border-color: blue;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+
+.matched-data {
+  margin-top: 20px;
+}
+
+.matched-item {
+  list-style: none;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+/* Add more styles as needed */
+
+  
